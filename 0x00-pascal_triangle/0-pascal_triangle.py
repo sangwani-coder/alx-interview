@@ -8,17 +8,17 @@ def pascal_triangle(n):
         param: n - size of triangle
     """
 
-    listOfIntegers = []
+    iList = []
     if n <= 0:
-        return listOfIntegers # Empty list
+        return iList  # Empty list
 
     for i in range(n):
-        listOfIntegers.append([])
-        listOfIntegers[i].append(1)
+        iList.append([])
+        iList[i].append(1)
 
-        for j in range(1,i):
-            listOfIntegers[i].append(listOfIntegers[i-1][j-1]+listOfIntegers[i-1][j])
-        if(n!=0):
-            listOfIntegers[i].append(1)
+        for j in range(1, i):
+            iList[i].append(iList[i-1][j-1]+iList[i-1][j])
+        if(n != 0):
+            iList[i].append(1)
 
-    return listOfIntegers
+    return iList
