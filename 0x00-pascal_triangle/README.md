@@ -11,10 +11,10 @@ It returns an empty list if n <= 0.
 
 **Example output**
 
-zyambo@ubuntu:~/0x00$ ./0-main.py\
-[1]\
-[1,1]\
-[1,2,1]\
-[1,3,3,1]\
-[1,4,6,4,1]\
-zyambo@ubuntu:~/0x00$
+<p>zyambo@ubuntu:~/0x00$ ./0-main.py</p>
+<p>[1]</p>
+<p>[1,1]</p>
+<p>[1,2,1]</p>
+<p>[1,3,3,1]</p>
+<p>[1,4,6,4,1]<p>
+<p>zyambo@ubuntu:~/0x00$</p>
