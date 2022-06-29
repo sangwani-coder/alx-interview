@@ -3,3 +3,4 @@ This repository contains Technical Interview Projects. They are aimed at trainin
 
 ## Projects:
 * [x] [0x00-pascal's triangle](./0x00-pascal_triangle)
+* [ ] [0x01. Lockboxes](./0x01-ockboxes)
