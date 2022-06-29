@@ -1,2 +1,5 @@
 # alx-interview
-This project contains code for projects preparing me for software enginerring job interviews.
+This repository contains Technical Interview Projects. They are aimed at training and preparing us for software engineering job technical interviews.
+
+## Projects:
+* [x] [0x00-pascal's triangle](./0x00-pascal_triangle)
