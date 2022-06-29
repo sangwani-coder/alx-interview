@@ -2,7 +2,7 @@
 """return list of pascal triangle numbers"""
 
 
-def pascal_triangle(n):
+def pascal_triangle(n: int) -> list:
     """
         return a list of numbers representing pascal triangle
         param: n - size of triangle
@@ -20,5 +20,4 @@ def pascal_triangle(n):
             iList[i].append(iList[i-1][j-1]+iList[i-1][j])
         if(n != 0):
             iList[i].append(1)
-
     return iList
