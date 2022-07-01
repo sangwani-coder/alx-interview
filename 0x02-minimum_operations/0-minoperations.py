@@ -14,7 +14,7 @@ def minOperations(n: int) -> int:
     """
 
     def dfs(n: int):
-        if n == 1:
+        if n == 1 or n > 1000:
             return 0
         for i in range(n // 2, 0, -1):
             if n % i == 0:
