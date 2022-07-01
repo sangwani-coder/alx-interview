@@ -4,6 +4,7 @@
     calculates the fewest number of operations needed to result
     in exactly n H characters in the file.
 """
+import math
 
 
 def minOperations(n: int) -> int:
@@ -15,7 +16,7 @@ def minOperations(n: int) -> int:
 
     def dfs(n: int):
         try:
-            if n == 1:
+            if n == 1 or math.isinf(n):
                 return 0
             for i in range(n // 2, 0, -1):
                 if n % i == 0:
