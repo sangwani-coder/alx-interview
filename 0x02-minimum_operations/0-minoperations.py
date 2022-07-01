@@ -27,6 +27,6 @@ def minOperations(n: int) -> int:
                     # ((n // i) - 1) is (21 // 7) - 1. Here we have 7 already,
                     # used 2 steps to paste 7's
                     # To get 7's on the notepad, we need dfs(7) steps.
-        except Exception:
+        except MemoryError:
             return 0
     return dfs(n)
