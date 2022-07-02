@@ -9,12 +9,13 @@
 def minOperations(n: int) -> int:
     """
         calculates the fewest number of operations needed to result
-    """ 
+    """
 
     if type(n) == int or n > 1:
         return int(ops(n))
     else:
         return 0
+
 
 def ops(n: int) -> int:
     """ calculate n operations to copy paste"""
