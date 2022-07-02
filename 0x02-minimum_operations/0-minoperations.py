@@ -4,7 +4,6 @@
     calculates the fewest number of operations needed to result
     in exactly n H characters in the file.
 """
-import math
 
 
 def minOperations(n: int) -> int:
@@ -16,7 +15,6 @@ def minOperations(n: int) -> int:
         return int(ops(n))
     else:
         return 0
-
 
 def ops(n: int) -> int:
     """ calculate n operations to copy paste"""
