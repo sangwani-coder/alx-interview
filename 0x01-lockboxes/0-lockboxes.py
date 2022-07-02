@@ -20,4 +20,3 @@ def canUnlockAll(boxes: List) -> bool:
         return True
 
     return False
-
