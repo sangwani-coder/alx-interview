@@ -8,7 +8,9 @@ def canUnlockAll(boxes: List) -> bool:
 
     if len(boxes) < 1:
         return False
+
     box = [0]
+
     for keys in box:
         for key in boxes[keys]:
             if key not in box:
@@ -16,5 +18,6 @@ def canUnlockAll(boxes: List) -> bool:
                     box.append(key)
     if len(box) == len(boxes):
         return True
+
     return False
 
