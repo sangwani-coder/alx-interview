@@ -19,15 +19,14 @@ def validUTF8(data):
             while mask_n_bytes & i:
                 countOfBytes += 1
                 mask_n_bytes = mask_n_bytes >> 1
-                if countOfBytes == 0:
-                    continue
-                if countOfBytes == 1 or countOfBytes > 4:
-                    return False
+            if countOfBytes == 0:
+                continue
+            if countOfBytes == 1 or countOfBytes > 4:
+                return False
         else:
             if not (i & oneVer and not (i & secondVer)):
                 return False
         countOfBytes -= 1
-        if  countOfBytes == 0:
-            return True
+    if countOfBytes == 0:
+        return True
     return False
-
