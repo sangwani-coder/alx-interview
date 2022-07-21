@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+
 """ module contains program that implements the nqueens challenge"""
 import sys
 
