@@ -13,7 +13,7 @@ def rotate_2d_matrix(mat):
         for j in range(i, N - i - 1):
             tmp = mat[i][j]
             mat[i][j] = mat[x - offset][i]
-            mat[x - offset][i] = mat[x - offset][x]
-            mat[x - offset][x] = mat[j][i]
-            mat[j][i] = tmp
+            mat[x - offset][i] = mat[x][x - offset]
+            mat[x][x - offset] = mat[j][x]
+            mat[j][x] = tmp
             offset += 1
