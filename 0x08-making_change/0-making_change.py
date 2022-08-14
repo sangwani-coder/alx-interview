@@ -4,12 +4,11 @@
     total: the change to be given
     return: fewest number of coins needed to meet total, otherwise return -1
 """
-#import sys
 
 
-def makeChange(coins: list, total: int) -> int:
+def makeChange(coins, total):
     """ find min coins to make change"""
-    if total == 0:
+    if total <= 0:
         return 0
     MAX = total + 1
     size: int = len(coins)
@@ -30,4 +29,3 @@ def makeChange(coins: list, total: int) -> int:
     if change[total] == MAX:
         return -1
     return change[total]
-
