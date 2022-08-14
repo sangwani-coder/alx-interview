@@ -29,3 +29,4 @@ def makeChange(coins: list, total: int) -> int:
     if change[total] == sys.maxsize:
         return -1
     return change[total]
+
