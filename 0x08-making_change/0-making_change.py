@@ -1,32 +1,30 @@
 #!/usr/bin/python3
-""" make change"""
+""" making change"""
+# coins: list containg infinite numbe of coins
+# total: the change to be given
+# return: (int) min number of coins to meet totale else return -1
+import sys
+
 
 def makeChange(coins: list, total: int) -> int:
     """ find min coins to make change"""
-    count = 0
-    coin = 0
-    stack = []
-    if total <= 0:
-        return count
-    for i in range(len(coins)):
-        if coins[0] == total:
-            count += 1
-            return count
-        if coins[i] > total:
-            continue
-        else:
-            x = subtract(total, coins[i], count)
-            total = x[0]
-            count = x[1]
+    if total == 0:
+        return 0
+    size: int = len(coins)
+    change: int = [0] * len(total + 1)
+    change[0] = 0
+    # initialize change values as infinite
+    for i in range(1, total + 1):
+        change[i] = sys.maxsize
+    # find min coins required from 1 to total
+    for i in range(1, total + 1):
+        # go through all coins less than i
+        for j in range(size):
+            if coins[j] <= i:
+                count: int = change[i - coins[j]]
+                if count != sys.maxsize and count + 1 < change[i]:
+                    change[i] = count + 1
 
-    if total == 0 and count > 0:
-        return count
-    return -1
-
-def subtract(total: int, value: int, count: int):
-    while total >= value:
-        total -= value
-        count += 1
-
-    return list([total, count])
-
+    if change[total] == sys.maxsize:
+        return -1
+    return change[total]
