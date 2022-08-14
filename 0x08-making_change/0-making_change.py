@@ -2,7 +2,7 @@
 """ making change"""
 # coins: list containg infinite numbe of coins
 # total: the change to be given
-# return: (int) min number of coins to meet totale else return -1
+# return: fewest number of coins needed to meet total, otherwise return -1
 import sys
 
 
