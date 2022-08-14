@@ -29,4 +29,3 @@ def makeChange(coins, total):
     if change[total] == MAX:
         return -1
     return change[total]
-
