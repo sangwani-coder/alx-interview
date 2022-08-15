@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-""" making change
-    coins: list containg infinite numbe of coins
-    total: the change to be given
-    return: fewest number of coins needed to meet total, otherwise return -1
-"""
+""" makeChange implementation"""
 
 
 def makeChange(coins, total):
