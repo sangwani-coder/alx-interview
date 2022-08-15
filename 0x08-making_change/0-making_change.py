@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-""" makeChange problem implementation
+""" 
+find the minimum number of coins needed to
+meet a given amount total
 """
 
 
 def makeChange(coins, total):
-    """ find min coins to meet total
-    """
+    """Make change module"""
     if total <= 0:
         return 0
     MAX = total + 1
