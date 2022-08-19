@@ -1,30 +1,22 @@
 #!/usr/bin/python3
-""" 
-find the minimum number of coins needed to
-meet a given amount total
-"""
+""" Change comes from within """
 
 
 def makeChange(coins, total):
-    """Make change module"""
-    if total <= 0:
+    """ Given a pile of coins of different values, determine the fewest number
+        of coins needed to meet a given amount total.
+    """
+    if total < 1:
         return 0
-    MAX = total + 1
-    size: int = len(coins)
-    change: int = [0] * (total + 1)
-    change[0] = 0
-    # initialize change values as infinite
-    for i in range(1, total + 1):
-        change[i] = MAX
-    # find min coins required from 1 to total
-    for i in range(1, total + 1):
-        # go through all coins less than i
-        for j in range(size):
-            if coins[j] <= i:
-                count: int = change[i - coins[j]]
-                if count != MAX and count + 1 < change[i]:
-                    change[i] = count + 1
-
-    if change[total] == MAX:
+    coins.sort()
+    coins.reverse()
+    fewest = 0
+    for coin in coins:
+        if total <= 0:
+            break
+        buff = total // coin
+        fewest += buff
+        total -= (buff * coin)
+    if total != 0:
         return -1
-    return change[total]
+    return fewest
