@@ -8,8 +8,6 @@ def isWinner(x, nums):
     benWins = 0
     rnd = 0
     while (rnd < x):
-        if nums[rnd] == 1:
-            benWins += 1
         winner = playPrime(nums[rnd])
         if winner == 'Ben':
             benWins += 1
@@ -28,6 +26,8 @@ def playPrime(n):
     """ initiates play"""
     turn = 0
     nums = []
+    if n == 1:
+        return 'Ben'
     for i in range(1, n + 1):
         nums.append(i)
     for j in nums[:]:
