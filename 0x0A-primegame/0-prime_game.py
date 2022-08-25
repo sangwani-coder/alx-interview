@@ -11,7 +11,6 @@ def isWinner(x, nums):
         if nums[rnd] == 1:
             benWins += 1
         winner = playPrime(nums[rnd])
-        #print('round: {} n:{} winner is {}'.format(rnd + 1, nums[rnd], winner))
         if winner == 'Ben':
             benWins += 1
         if winner == 'Maria':
@@ -23,15 +22,17 @@ def isWinner(x, nums):
         return 'Maria'
     return None
 
+
 # play primegame
 def playPrime(n):
+    """ initiates play"""
     turn = 0
     nums = []
     for i in range(1, n + 1):
         nums.append(i)
     for j in nums[:]:
         # first move maria
-        if turn == 0 and  j == 2:
+        if turn == 0 and j == 2:
             turn += 1
             for i in nums[:]:
                 if i % j == 0:
