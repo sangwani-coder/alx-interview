@@ -6,19 +6,20 @@ def isWinner(x, nums):
     """ returns the winner of the primegame"""
     mariaWins = 0
     benWins = 0
-    rnd = 0
-    while (rnd < x):
-        winner = playPrime(nums[rnd])
+    Round = 0
+    while (Round < x):
+        winner = playPrime(nums[Round])
         if winner == 'Ben':
             benWins += 1
         if winner == 'Maria':
             mariaWins += 1
-        rnd += 1
+        Round += 1
     if benWins > mariaWins:
         return 'Ben'
     if benWins < mariaWins:
         return 'Maria'
-    return None
+    else:
+        return None
 
 
 # play primegame
@@ -55,5 +56,3 @@ def playPrime(n):
         return 'Ben'
     if turn == 1:
         return 'Maria'
-    else:
-        return None
